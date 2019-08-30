@@ -22,7 +22,7 @@ INSTALLER?=$(CONF)_uf_installer-$(SPLUNK_UF_VERSION)-$(SPLUNK_UF_HASH)-Linux-x86
 INSTALLER_SCRIPT=$(INSTALLER)
 SCRIPT?=installme.sh
 
-all:	distdir build download config copy installer
+all:	makeself distdir build download config copy installer
 	
 installer: $(INSTALLER_SCRIPT)
 	
@@ -85,6 +85,12 @@ help:
 	@echo "DS URL:		$(DS_URL)"
 	@echo "Installer:	$(INSTALLER)"
 	@echo
+
+makeself: tools/makeself/bin/makeself.sh
+
+tools/makeself/bin/makeself.sh:
+	git submodule init
+	git submodule update
 
 realclean: clean
 	rm -rf download build dist
