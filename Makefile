@@ -86,9 +86,9 @@ help:
 	@echo "Installer:	$(INSTALLER)"
 	@echo
 
-makeself: tools/makeself/bin/makeself.sh
+makeself: tools/makeself/makeself.sh
 
-tools/makeself/bin/makeself.sh:
+tools/makeself/makeself.sh:
 	git submodule init
 	git submodule update
 
