@@ -70,6 +70,7 @@ $(DOWNLOAD_SCRIPT):
 
 $(BUILDDIR)/installme.sh: FORCE
 	sed -e 's!@@DS_URL@@!$(DS_URL)!' $(TOPDIR)/scripts/$(SCRIPT) > $@
+	chmod +x $@
 
 config: $(BUILDDIR)/installme.sh
 
