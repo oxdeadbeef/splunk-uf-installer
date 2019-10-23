@@ -1,0 +1,5 @@
+SPLUNK_UF_VERSION=8.0.0
+SPLUNK_UF_HASH=bd63e13aa157
+DESC="Splunk Linux UF Installer"
+DS_URL=https://127.0.0.1:8089
+INSTALLER=splunk_linux_installer-$(SPLUNK_UF_VERSION)-$(SPLUNK_UF_HASH).sh
